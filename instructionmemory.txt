@@ -1,0 +1,10 @@
+// --- Phase 1: Basic Math & Output Verification ---
+        rom[8'd0] = 16'h1110; // LDB r1, 0x10  -> Load 0x10 into r1
+        rom[8'd1] = 16'h1205; // LDB r2, 0x05  -> Load 0x05 into r2
+        rom[8'd2] = 16'hb312; // ADD r3, r1, r2 -> r3 = r1 + r2 (0x15)
+        rom[8'd3] = 16'h2300; // STB r3        -> Send r3 (0x15) to CPU Output Port
+
+        // --- Phase 2: Flag & Status Register Verification ---
+        rom[8'd4] = 16'h15FF; // LDB r5, 0xFF  -> Load max value 0xFF into r5
+        rom[8'd5] = 16'he650; // INC r6, r5     -> Increment r5. r6 becomes 0x00, Carry = 1
+        rom[8'd6] = 16'h3000; /
