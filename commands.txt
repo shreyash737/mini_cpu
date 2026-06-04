@@ -1,0 +1,2 @@
+iverilog -o cpu_sim final.v final_tb.v
+vvp cpu_sim    
